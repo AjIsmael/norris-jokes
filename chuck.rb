@@ -5,7 +5,9 @@ class ChuckJokes
   end
 
   def help
-    puts "trial"
+    puts "Run [ruby app.rb random] to give you a random joke."
+    puts "Run [ruby app.rb {IdNumber} ] to give you a joke with the id you input."
+    puts "Run [ruby app.rb {Name}] to give you a joke with changing the name."
 
   end
 
