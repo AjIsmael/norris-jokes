@@ -1,5 +1,5 @@
 require 'chuck_norris'
-require './app'
+# require './app'
 class ChuckJokes
   def initialize()
   end
