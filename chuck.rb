@@ -13,8 +13,12 @@ class ChuckJokes
 
   def get_joke_by_id(id)
     joking = ChuckNorris::JokeFinder.find_joke(id)
-    puts joking.joke
-    puts joking.id
+    if joking.id == 'id'
+      puts "A joke with that id doesnt exist."
+    else
+      puts joking.joke
+      puts joking.id
+    end
   end
 
   def replace_name(name)
