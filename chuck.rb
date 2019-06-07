@@ -1,4 +1,5 @@
 require 'chuck_norris'
+require './app'
 class ChuckJokes
   def initialize()
   end
@@ -16,9 +17,13 @@ class ChuckJokes
 
   def replace_name(name)
     nam = name.split()
-    joking = ChuckNorris::JokeFinder.get_joke(first_name: "#{nam[0]}", last_name: "#{nam[1]}" )
-    puts joking.joke
-    puts joking.id
+    if name.split().length == 2
+      joking = ChuckNorris::JokeFinder.get_joke(first_name: "#{nam[0]}", last_name: "#{nam[1]}" )
+      puts joking.joke
+      puts joking.id
+    else
+      puts help
+    end
   end
 
   def random
